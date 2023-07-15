@@ -30,4 +30,7 @@ app.delete("/inventory", (req, res) => {
   res.send("DELETE INVENTORY");
 });
 
-app.listen(3001);
+app.listen(5002, () => {
+  console.log('server started on port 5002');
+});
+

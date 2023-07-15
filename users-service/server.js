@@ -30,4 +30,6 @@ app.delete("/users", (req, res) => {
   res.send("DELETE USERS");
 });
 
-app.listen(3003);
+app.listen(5004, () => {
+  console.log('server started on port 5004');
+});
