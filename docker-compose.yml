@@ -5,16 +5,21 @@ services:
     build: ./inventory-service
     ports:
       - "5002:5002"
+
   shipping-service:
     restart: always # default is 'no', other values: always, on-failure and unless-stopped 
     build: ./shipping-service
     ports:
       - "5000:5000"
+    depends_on:
+      - billing-service
+
   users-service:
     restart: always
     build: ./users-service
     ports:
       - "5004:5004"
+
   billing-service:
     restart: always
     build: ./billing-service
