@@ -19,6 +19,9 @@ app.get("/billing", (req, res) => {
 });
 
 app.post("/billing", (req, res) => {
+  console.log('===============billing=====================');
+  console.log(req.body);
+  console.log('====================================');
   res.send("POST BILLING");
 });
 
