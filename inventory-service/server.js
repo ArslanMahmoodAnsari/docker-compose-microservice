@@ -10,7 +10,7 @@ app.use(morgan("combined"));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Hello World from inventory service");
+  res.send("Inventory service is live");
 });
 
 // ! INVENTORY CRUD OPERATIONS
